@@ -124,7 +124,7 @@ nav ul li a:hover {
     align-items: flex-start; /* ✅ 배경을 위쪽에 배치 */
 
     /* 배경 이미지 설정 */
-    background: url('../images/firstbackground.png') no-repeat center top;
+    background: url('images/firstbackground.png') no-repeat center top;
     background-size: cover;
     margin-top: -15vh; /* ✅ 위쪽 10%만 텍스트와 겹치게 조정 */
 }
