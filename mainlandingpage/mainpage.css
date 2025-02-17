@@ -1,0 +1,595 @@
+/* 🔴 전체 기본 스타일 */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Playfair Display', serif;
+    background-color: #000; /* 배경 검정 */
+    color: white;
+}
+
+/* 🔴 네비게이션 바 스타일 */
+header {
+    width: 100%;
+    height: 100px; /* ✅ 네비게이션 높이 */
+    background: #151515; /* ✅ Figma 배경 색상 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* 🔴 네비게이션 내부 컨테이너 */
+.nav-container {
+    width: 1915px; /* ✅ 전체 너비 */
+    height: 100px; /* ✅ 높이 */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px; /* ✅ 좌우 패딩 */
+}
+
+/* 🔴 내부 컨텐츠 컨테이너 (1001px × 44.57px) */
+.nav-content {
+    width: 1001px;
+    height: 44.57px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* 🔴 네비게이션 메뉴 */
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 160px; /* ✅ Figma에서 지정한 메뉴 간격 */
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    width: 97px; /* ✅ 메뉴 항목 크기 */
+    height: 39px; /* ✅ 메뉴 항목 높이 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Playfair Display', serif; /* ✅ Figma 폰트 */
+    font-size: 28px; /* ✅ 폰트 크기 */
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: red;
+}
+
+/* 🔴 로고 크기 조정 */
+.logo-button img {
+    height: 44px; /* ✅ 로고 높이 */
+}
+
+/* 🔴 우측 아이콘 컨테이너 (알림 + 로그인 버튼) */
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 100px; /* ✅ 피그마 기준 갭 */
+}
+
+/* 🔴 알림 및 로그인 버튼 크기 통일 */
+.notification-icon,login-icon { /* ✅ 로그인 버튼도 같은 크기로 통일 */
+    width: 48px;  /* ✅ 피그마 기준 크기 */
+    height: 48px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+/* 🔴 마우스 오버 효과 */
+.icon:hover, .login-icon:hover {
+    opacity: 0.7;
+}
+
+#sequence-text {
+    top: 167px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 2; /* ✅ 텍스트가 배경보다 위에 오도록 설정 */
+    margin-top: 100px;
+}
+
+#sequence-text img {
+    width: 90%;
+    max-width: 1966px;
+}
+
+/* 🔴 배경 이미지 섹션 */
+#firstbackground {
+    top: 167px;
+    width: 100%;
+    height: 919px; /* ✅ 배경 높이 조정 */
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* ✅ 배경을 위쪽에 배치 */
+
+    /* 배경 이미지 설정 */
+    background: url('../images/firstbackground.png') no-repeat center top;
+    background-size: cover;
+    margin-top: -15vh; /* ✅ 위쪽 10%만 텍스트와 겹치게 조정 */
+}
+
+
+/* 🔴 메인 메시지 섹션 (Figma 레이아웃 적용) */
+#main-message {
+    width: 100%;
+    height: 1137px; /* ✅ Figma에서 지정한 높이 적용 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* ✅ 세로 중앙 정렬 */
+    align-items: center; /* ✅ 가로 중앙 정렬 */
+    text-align: center;
+    color: #EEEEEE; /* ✅ Figma 색상 적용 */
+}
+
+/* 🔴 큰 제목 (H1) */
+#main-message h1 {
+    font-family: 'SUIT', sans-serif; /* ✅ Figma 폰트 적용 */
+    font-size: 76px; /* ✅ 크기 조정 */
+    font-weight: 700;
+    line-height: 114px; /* ✅ 줄 간격 조정 */
+    letter-spacing: 0; /* ✅ 자간 조정 */
+    margin-bottom: 40px; /* ✅ 버튼과 간격 조정 */
+}
+
+/* 🔴 버튼 스타일 (Figma 사이즈 적용) */
+.main-button {
+    display: inline-block;
+    width: 938px; /* ✅ Figma에서 확인한 정확한 너비 */
+    height: 114px; /* ✅ Figma에서 확인한 정확한 높이 */
+    font-size: 36px; /* ✅ Figma 폰트 크기 */
+    font-weight: 700;
+    color: #FF3B30; /* ✅ 빨간색 적용 */
+    background-color: transparent; /* ✅ 배경 없음 */
+    border: 4px solid #FF3B30; /* ✅ 빨간색 테두리 */
+    line-height: 114px; /* ✅ 버튼 높이에 맞춰 텍스트 중앙 정렬 */
+    text-align: center;
+    text-decoration: none; /* ✅ 밑줄 제거 */
+    transition: all 0.3s ease;
+}
+
+/* 🔴 버튼 호버 효과 */
+.main-button:hover {
+    background-color: #FF3B30; /* ✅ 배경 빨간색 */
+    color: white; /* ✅ 글씨 흰색 */
+}
+
+/* 🔴 About 섹션 스타일 */
+#about-section {
+    width: calc(100vw - 30px); /* 브라우저 너비에서 여백 고려 */
+    max-width: 1915px; /* 최대 너비 제한 */
+    height: 1286px; /* 전체 높이 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 0 auto;
+}
+
+/* 🔴 About 컨테이너 */
+.about-container {
+    width: 100%;
+    max-width: 1915px; /* ✅ 피그마 기준 */
+    height: 1286px;
+    text-align: center; /* ✅ 컨텐츠 가운데 정렬 */
+    position: relative;
+    margin: 0 auto;
+}
+
+/* 🔴 About 제목 */
+.about-title {
+    position: absolute;
+    top: 164px;
+    left: 160px;
+    width: 176px;
+    height: 90px;
+    font-size: 64px;
+    font-weight: 600;
+    font-family: "Playfair Display", serif;
+    color: white;
+    text-align: left; /* ✅ 텍스트 왼쪽 정렬 */
+}
+
+/* 🔴 소개 문단 */
+.about-description {
+    position: absolute;
+    top: 290px;
+    left: 160px;
+    width: 480px;
+    height: 123px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 40.8px;
+    font-family: "SUIT", sans-serif;
+    color: #EEEEEE;
+    letter-spacing: 0;
+    text-align: left; /* ✅ 텍스트 왼쪽 정렬 */
+}
+
+/* 🔴 로고 이미지 */
+.about-logo {
+    position: absolute;
+    top: 401px;
+    left: 50%; /* ✅ 중앙 정렬 */
+    transform: translateX(-50%); /* ✅ 정확한 가운데 정렬 */
+    width: 539px;
+    height: auto;
+}
+
+/* 🔴 추가 설명 */
+.about-subtext {
+    position: absolute;
+    top: 866px;
+    right: 160px; 
+    width: 480px;
+    height: 107px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 36px;
+    font-family: "SUIT", sans-serif;
+    color: #EEEEEE;
+    text-align: left;
+}
+
+/* 🔴 Benefit 섹션 스타일 */
+.benefit-section {
+    width: 100%;
+    max-width: 1915px; /* ✅ 피그마 기준 너비 */
+    height: auto; /* ✅ 높이 자동 조정 */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* ✅ 가운데 정렬 */
+    justify-content: flex-start;
+    margin: 0 auto;
+    padding-top: 200px; /* ✅ About과의 간격 조정 */
+}
+
+/* 🔴 Benefit 제목 (About과 동일하게 설정) */
+.benefit-title {
+    position: absolute;
+    top: 3600px;
+    left: 160px; /* ✅ About 제목과 동일한 위치 */
+    width: auto;
+    font-size: 64px;
+    font-weight: 600;
+    font-family: "Playfair Display", serif;
+    color: white;
+    text-align: left !important; /* ✅ 텍스트 왼쪽 정렬 */
+}
+
+/* 🔴 Benefit 컨테이너 */
+.benefit-container {
+    width: 1200px; /* ✅ 컨텐츠 최대 너비 */
+    display: flex;
+    flex-direction: column;
+    gap: 200px; /* ✅ 아이템 간 간격 */
+}
+
+/* 🔴 개별 Benefit 아이템 */
+.benefit-item {
+    display: flex;
+    align-items: flex-start; /* ✅ 로고를 텍스트 위로 올리기 위해 flex-start */
+    justify-content: flex-start; /* ✅ 내부 요소 왼쪽 정렬 */
+    width: 100%;
+    max-width: 1200px; /* ✅ 컨테이너 크기에 맞춤 */
+    position: relative;
+
+}
+
+/* 🔴 왼쪽 이미지 */
+.benefit-image {
+    width: 290px;
+    height: 380px;
+    object-fit: cover;
+    margin-right: 40px; /* ✅ 피그마 기준 간격 */
+}
+
+/* 🔴 로고 아이콘 (이미지 위쪽에 위치) */
+.benefit-icon {
+    position: absolute;
+    top: 0px; /* ✅ 이미지 위쪽에 배치 */
+    left: 320px; /* ✅ 이미지 오른쪽에 배치 */
+    width: 50px; /* ✅ 크기 조정 */
+    height: 50px;
+}
+
+/* 🔴 텍스트 컨텐츠 */
+.benefit-content {
+    display: flex;
+    flex-direction: column;
+    font-family: "SUIT", sans-serif;
+    align-items: flex-start;
+    font-size: 20px;
+    max-width: 1000px; /* ✅ 피그마 기준 */
+    margin-top: 250px; /* ✅ 로고와의 간격 확보 */
+}
+
+
+/* 🔴 Benefit 설명 */
+.benefit-description {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 28px;
+    color: #EEE;
+}
+
+/* 🔴 Partner 섹션 */
+.partner-section {
+    width: 100%;
+    max-width: 1915px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 auto;
+    padding-top: 100px;
+}
+
+/* 🔴 Partner 제목 */
+.partner-title {
+    font-family: "Playfair Display", serif;
+    font-size: 64px;
+    font-weight: 600;
+    color: white;
+    text-align: left;
+    margin-left: 160px; /* ✅ 피그마 기준 Left 값 */
+}
+
+/* 🔴 Partner 이미지 컨테이너 */
+.partner-container {
+    position: relative;
+    width: 1216px;
+    height: 508px;
+    margin-top: 50px;
+    margin-left: 160px; /* ✅ 피그마 기준 Left 값 */
+}
+
+/* 🔴 Partner 이미지 */
+.partner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 🔴 Underdog Revolution 텍스트 */
+.partner-highlight {
+    position: absolute;
+    bottom: 0%; /* ✅ 하단 끝선에 정확히 맞춤 */
+    left: 50%;
+    transform: translateX(-50%);
+    
+    font-family: "Playfair Display", serif;
+    font-size: 80px; /* ✅ 피그마 기준 */
+    font-weight: 600;
+    font-style: italic;
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+
+/* 🔴 설명 텍스트 */
+.partner-description {
+    width: 1000px;
+    height: 255px;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 36px;
+    font-family: "SUIT", sans-serif;
+    color: #EEEEEE;
+    text-align: left;
+    margin-top: 20px;
+    margin-left: 160px;
+}
+
+
+.scroll-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 2316px;
+    margin: 20px auto;
+    overflow: hidden;
+    padding: 40px 0;
+}
+
+
+.scroll-container {
+    display: flex;
+    gap: 32px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    padding: 20px 10px;
+    border: none;
+    width: 100%;
+}
+
+.scroll-container::-webkit-scrollbar {
+    display: none;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    text-align: left;
+    min-width: 444px;
+    top:10px;
+    height: 670px;
+    background: none;
+    color: white;
+    font-family: "SUIT", sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    border-radius: 10px;
+}
+
+.item img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    margin-bottom: 20px;
+
+}
+
+.item .text {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 2.0;
+    color: #EEE;
+    margin-top: 20px;
+    bottom: 20px;
+}
+
+.experience-title{
+    font-family: "Playfair Display", serif;
+    font-size: 64px;
+    font-weight: 600;
+    color: white;
+    text-align: left;
+    margin-left: 160px;
+}
+
+/* 페이지 하단 영역 */
+.page-section {
+    text-align: center;
+    padding: 40px 0;
+}
+
+/* 아이콘 스타일 */
+.icon {
+    width: 131px;
+    height: 329px;;
+    margin-bottom: 100px;
+}
+
+/* 버튼 스타일 */
+.custom-button {
+    background-color: #424242;
+    color: white;
+    border: none;
+    width: 1219px;
+    height:96px;
+    padding:24px 24px ;
+    gap: 10px;
+    font-size: 32px;
+    cursor: pointer;
+    width: 1219px;
+}
+
+.custom-button:hover {
+    background-color: #555;
+}
+
+/* 🔴 전체 섹션 스타일 */
+.who-made-section {
+    position: relative;
+    width: 100%;
+    height: auto; /* ✅ 높이를 자동으로 설정 (한 페이지에 다 나오게) */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+    padding: 150px 0; /* ✅ 상하 패딩 추가로 자연스럽게 정렬 */
+}
+
+/* 🔴 배경 이미지 + 위아래 그라데이션 적용 */
+.who-made-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 50%),
+        linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 50%),
+        url("../images/whomade.png") no-repeat center center/cover;
+    z-index: -1;
+}
+
+/* 🔴 제목 스타일 */
+.who-made-title {
+    font-family: "Playfair Display", serif;
+    font-size: 64px;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    margin-bottom: 50px; /* ✅ 아래 간격 추가 */
+}
+
+/* 🔴 팀 컨테이너 */
+.team-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+}
+
+/* 🔴 디자인 및 개발팀 스타일 */
+.design-team, .dev-team {
+    text-align: center;
+    margin-bottom: 30px; /* ✅ 팀 간 간격 조정 */
+}
+
+/* 🔴 제목 스타일 */
+h2 {
+    font-size: 44px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    font-family: "Playfair Display", serif;
+}
+
+/* 🔴 역할과 이름을 나란히 배치 */
+.role-container {
+    display: flex; /* ✅ 가로 정렬 */
+    justify-content: top; /*  가운데 정렬 */
+    align-items: top; /* ✅ 수직 정렬 */
+    gap: 50px; /* ✅ 양쪽 간격 */
+    width: 100%;
+    max-width: 600px; /* ✅ 내용 크기 조정 */
+}
+
+/* 🔴 역할 (Designer, Frontend, Backend) */
+.role {
+    font-family: "Noto Sans", sans-serif;
+    font-style: italic;
+    opacity: 0.8;
+    font-weight: 100;
+    font-size: 24px;
+    text-align: right; /* ✅ 왼쪽 텍스트 정렬 */
+    flex: 1; /* ✅ 왼쪽 영역 차지 */
+}
+
+/* 🔴 이름 목록 */
+.name {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 24px;
+    line-height: 43.2px;
+    font-weight: 400;
+    font-style: italic;
+    text-align: left; /* ✅ 오른쪽 텍스트 정렬 */
+    flex: 2; /* ✅ 오른쪽 영역 차지 */
+}
